@@ -34,6 +34,7 @@ export class WalletsService {
     }
 
     const driverType = this.dataSource.options?.type;
+    const driverType = this.dataSource.options.type;
 
     return withTransaction(this.dataSource, async (manager) => {
       let wallet = await manager.findOne(WalletBalanceEntity, {
